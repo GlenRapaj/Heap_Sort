@@ -7,60 +7,6 @@ public class mainClass {
 	
 
 	
-	public static boolean hasLeftParent( int[] arr , int position ) {
-		
-		// boolean answer = false ;
-		/*
-		2i + 1 = position  ( position - 1 ) 0.5 = i
-		2i + 2 = position  ( position - 2 ) 0.5 = i
-		*/
-		
-		int i =  ( position - 1 ) / 2 ;
-		
-		if( i < position && i > 0 ) {
-			return true ;
-		}else {
-			return false ;
-		}
-	}
-	
-	
-	
-	public static boolean hasRightParent( int[] arr , int position ) {
-		
-		// boolean answer = false ;
-		/*
-		2i + 1 = position  ( position - 1 ) 0.5 = i
-		2i + 2 = position  ( position - 2 ) 0.5 = i
-		*/
-		
-		int i =  ( position - 2 ) / 2 ;
-		
-		if( i < position && i > 0 ) {
-			return true ;
-		}else {
-			return false ;
-		}
-	}
-	
-	
-	
-	public static int getLeftParentPosition( int[] arr , int position ) {
-		
-		int i =  ( position - 1 ) / 2 ;
-		
-		return i ;
-	}
-	
-	
-	
-	public static int getrightParentPosition( int[] arr , int position ) {
-		
-		int i =  ( position - 2 ) / 2 ;
-		
-		return i ;
-	}
-	
 	
 	public static void switchElment( int[] arr , int firstPosition , int secondPositin ) {
 		
@@ -70,8 +16,6 @@ public class mainClass {
 		
 	}
 	
-	
-	// 
 	
 	
 	public static int getRightChildPosition( int[] arr , int position ) {
@@ -211,10 +155,8 @@ public class mainClass {
 	
 
 	public static void main(String[] args) {
-		// Max Heap
+	
 		
-	//	 int[] arr = {1, 10, 2, 3, 4, 1, 2, 100, 23, 2};
-		 			// 0   1  2  3  4  5 
 		int[] arr = {1, 3, 7 , 5, 9, 2, 8, 4};
 		 
 		 int size = arr.length ;
@@ -223,38 +165,21 @@ public class mainClass {
 		 
 		
 		
-		
+		// max heap sort
 		// maxHeapSort(  arr ,  size );
-		 // minHeapSort(  arr ,  size );
+		// min heap sort
+		  minHeapSort(  arr ,  size );
 		 
-		 Huffman h = new Huffman();
+	
 		 
-		 List<huffmanObject> A = new ArrayList();
-		 List<huffmanObject> G = new ArrayList();
-		 
-		 A.add( new huffmanObject( "H" , 1) ) ;
-		 A.add( new huffmanObject( "u" , 1) ) ;
-		 A.add( new huffmanObject( "m" , 1) ) ;
-		 A.add( new huffmanObject( "a" , 1) ) ;
-		 A.add( new huffmanObject( "n" , 1) ) ;
-		 A.add( new huffmanObject( "f" , 2) ) ;
-			
-		 h.huffman(A, G);
-		/*
-				System.out.println(  "\n" + "Displayyn data of array " + "\n" );
+			System.out.println(  "\n" + "Displayyn data of array " + "\n" );
 			for( int i = 0 ; i < arr.length ; i++ ) {
 				System.out.println( arr[ i ] );
 				
 			}
-*/
 		 
 
-			System.out.println(  "\n" + "Displayyn data of array " + "\n" );
-		for( int i = 0 ; i < G.size() ; i++ ) {
-			System.out.println( G.get( i ) );
-			
-		}
-
+	
 		
 	}
 

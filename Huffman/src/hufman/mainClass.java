@@ -5,27 +5,21 @@ import java.util.List;
 
 public class mainClass {
 
-	
 	public static void switchElment( int[] arr , int firstPosition , int secondPositin ) {
 		int temp = arr[ firstPosition ];
 		arr[ firstPosition ] = arr[ secondPositin ] ;
 		arr[ secondPositin ] = temp ;	
 	}
 	
-	
-	
 	public static int getRightChildPosition( int[] arr , int position ) {
 		int i =  ( position * 2 ) + 2 ;
 		return i ;
 	}
 	
-	
 	public static int getLeftChildPosition( int[] arr , int position ) {
 		int i =  ( position * 2 ) + 1 ;
 		return i ;
 	}
-	
-	
 	
 	public static void createMinHeapNew( int[] arr , int size  ) {
 		for( int i = 0 ; i < size/2 ; i++ ) {
@@ -75,7 +69,6 @@ public class mainClass {
 		}
 	}
 	
-	
 	public static void maxHeapSort( int[] arr , int size ){
 		createMaxHeapNew( arr , size  );
 		while ( size > 1 ) {
@@ -84,7 +77,6 @@ public class mainClass {
 			size-- ;
 		}
 	}
-	
 	
 	public static void minHeapSort( int[] arr , int size ){
 		createMinHeapNew( arr , size  );
@@ -109,5 +101,4 @@ public class mainClass {
 		System.out.println(  "\n" + "Displayyn data of array " + "\n" );
 		for( int i = 0 ; i < arr.length ; i++ ) { System.out.println( arr[ i ] ); }	
 	}
-
 }
